@@ -1,7 +1,7 @@
 <?php
 
-//require_once __DIR__.'/../vendor/autoload.php';
-require_once 'core/Application.php';
+require_once __DIR__.'/../vendor/autoload.php';
+require_once '../core/Application.php';
 use app\core\Application;
 
 // Create a new instance of Application
