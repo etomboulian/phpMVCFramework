@@ -1,0 +1,11 @@
+{
+    "name": "etomb/phpmvc-framework",
+    "description": "A learning framework (do not use on prod server)",
+    "authors": [
+        {
+            "name": "Evan Tomboulian",
+            "email": "etomboulian@gmail.com"
+        }
+    ],
+    "require": {}
+}
