@@ -5,6 +5,7 @@ require_once 'Request.php';
 require_once 'Response.php';
 require_once 'Router.php';
 
+
 class Application
 {
     public static string $ROOT_DIR;

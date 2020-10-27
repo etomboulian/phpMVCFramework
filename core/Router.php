@@ -21,6 +21,11 @@ class Router
         $this->routes['get'][$path] = $callback;
     }
 
+    public function post($path, $callback)
+    {
+        $this->routes['post'][$path] = $callback;
+    }
+
     public function resolve()
     {
         // Get the data needed to determine if a page can be displayed
@@ -38,15 +43,17 @@ class Router
         // return a 404 page
         if($callback === false)
         {
+            $this->response->setStatusCode(404);
             return $this->renderView("404");
         }
 
-        // if the callback function is not registered then look for a view with the same name as request path
+        // look for a view with the same name as request path
         if(is_string($callback))
         {
             return $this->renderView($callback);
         }
         // otherwise return the result of the executed callback
+        // can be either a free function or an array like [className, funcName] to call a method
         return call_user_func($callback);        
     }
 
